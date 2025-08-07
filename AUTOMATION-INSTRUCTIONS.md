@@ -35,6 +35,14 @@
 - **"Script can't access presentation"**: Make sure you have edit access to the Google Slides presentation
 - **"Presentation not found"**: Double-check the presentation ID in the URL
 - **"Permission denied"**: Ensure you've authorized the script to access Google Slides
+- **Links not working**: If hyperlinks don't appear, you may need to manually add them in Google Slides after running the script
+
+### Features:
+- ✅ Professional color scheme
+- ✅ Automatic slide layout and formatting
+- ✅ Image insertion (Total Football tactical diagram)
+- ✅ Hyperlink creation (Total Football → Wikipedia)
+- ✅ Responsive text layout when images are present
 
 ## Option 2: Manual Copy-Paste Guide
 

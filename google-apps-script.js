@@ -70,11 +70,12 @@ function populateSlides() {
         title: "Empower shared ownership",
         bullets: [
           "Total Football approach - anyone can contribute across responsibilities",
-          "Distributed leadership with clear accountability",
+          "Distributed leadership with clear accountability", 
           "End-to-end ownership of your projects",
           "No silos, collaborative problem-solving"
         ],
-        personalNote: "Teams are most effective when we distribute and share responsibilities while empowering ownership."
+        personalNote: "Teams are most effective when we distribute and share responsibilities while empowering ownership.",
+        imageUrl: "https://static.independent.co.uk/2021/07/22/12/newFile-12.jpg?width=1200"
       },
       {
         title: "Start with the customer, iterate with purpose",
@@ -233,7 +234,7 @@ function createSlideContent(slide, content) {
   }
   
   // Build and create content
-  if (content.subtitle || content.bullets || content.personalNote) {
+  if (content.subtitle || content.bullets || content.personalNote || content.imageUrl) {
     let bodyContent = '';
     
     if (content.subtitle) {
@@ -249,38 +250,65 @@ function createSlideContent(slide, content) {
       bodyContent += content.personalNote;
     }
     
-    // Create main content box
-    const bodyShape = slide.insertTextBox(bodyContent);
-    const bodyRange = bodyShape.getText();
+    // Adjust content area if image is present
+    let textWidth = slideWidth - (margin * 2);
+    let imageWidth = 0;
     
-    // Position content area to fill remaining space
-    bodyShape.setTop(contentTop);
-    bodyShape.setLeft(margin);
-    bodyShape.setWidth(slideWidth - (margin * 2));
-    bodyShape.setHeight(contentHeight);
-    
-    // Style the body text (default)
-    bodyRange.getTextStyle()
-      .setFontSize(18)
-      .setForegroundColor('#34495e');
-    
-    // Style subtitle if present
-    if (content.subtitle) {
-      const subtitleEnd = content.subtitle.length;
-      bodyRange.getRange(0, subtitleEnd).getTextStyle()
-        .setFontSize(24)
-        .setItalic(true)
-        .setForegroundColor('#7f8c8d');
+    if (content.imageUrl) {
+      imageWidth = 200; // Image width
+      textWidth = slideWidth - (margin * 3) - imageWidth; // Text area width
+      
+      try {
+        // Add image to the right side
+        const imageBlob = UrlFetchApp.fetch(content.imageUrl).getBlob();
+        const image = slide.insertImage(imageBlob);
+        
+        // Position image on the right
+        image.setTop(contentTop);
+        image.setLeft(slideWidth - margin - imageWidth);
+        image.setWidth(imageWidth);
+        image.setHeight(150); // Fixed height
+      } catch (e) {
+        console.log('Could not load image:', e);
+        // If image fails, use full width for text
+        textWidth = slideWidth - (margin * 2);
+      }
     }
     
-    // Style personal note if present
-    if (content.personalNote) {
-      const noteStart = bodyContent.lastIndexOf(content.personalNote);
-      if (noteStart >= 0) {
-        bodyRange.getRange(noteStart, noteStart + content.personalNote.length).getTextStyle()
-          .setFontSize(16)
+    // Create main content box
+    if (bodyContent) {
+      const bodyShape = slide.insertTextBox(bodyContent);
+      const bodyRange = bodyShape.getText();
+      
+      // Position content area (adjusted for image if present)
+      bodyShape.setTop(contentTop);
+      bodyShape.setLeft(margin);
+      bodyShape.setWidth(textWidth);
+      bodyShape.setHeight(contentHeight);
+      
+      // Style the body text (default)
+      bodyRange.getTextStyle()
+        .setFontSize(18)
+        .setForegroundColor('#34495e');
+      
+      // Style subtitle if present
+      if (content.subtitle) {
+        const subtitleEnd = content.subtitle.length;
+        bodyRange.getRange(0, subtitleEnd).getTextStyle()
+          .setFontSize(24)
           .setItalic(true)
-          .setForegroundColor('#3498db');
+          .setForegroundColor('#7f8c8d');
+      }
+      
+      // Style personal note if present
+      if (content.personalNote) {
+        const noteStart = bodyContent.lastIndexOf(content.personalNote);
+        if (noteStart >= 0) {
+          bodyRange.getRange(noteStart, noteStart + content.personalNote.length).getTextStyle()
+            .setFontSize(16)
+            .setItalic(true)
+            .setForegroundColor('#3498db');
+        }
       }
     }
   }

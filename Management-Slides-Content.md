@@ -52,7 +52,7 @@
 ## Slide 6: Core Value #3
 **Empower shared ownership**
 
-- Total Football approach - anyone can contribute across responsibilities
+- [Total Football](https://en.wikipedia.org/wiki/Total_Football) approach - anyone can contribute across responsibilities
 - Distributed leadership with clear accountability
 - End-to-end ownership of your projects
 - No silos, collaborative problem-solving

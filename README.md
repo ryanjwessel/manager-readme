@@ -19,7 +19,7 @@ I get energized by connecting your individual career growth to meaningful custom
 High performance doesn't require burnout. We achieve quality without perfectionism, focusing on what truly matters for our customers. I believe we can be a continuously improving team while respecting work-life harmony. Long grueling hours should be the exception, not the rule.
 
 ### 3. Empower shared ownership
-Like Total Football, where any player can fill any role, I believe teams are most effective when we can distribute and share responsibilities while maintaining clear accountability. Everyone should be able to contribute across different areas while owning their specific domains.
+Like [Total Football](https://en.wikipedia.org/wiki/Total_Football), where any player can fill any role, I believe teams are most effective when we can distribute and share responsibilities while maintaining clear accountability. Everyone should be able to contribute across different areas while owning their specific domains.
 
 ### 4. Start with the customer, iterate with purpose
 We begin with customer needs and work backwards to find solutions. Then we improve incrementally through transparent goals and continuous feedback. Build only what's needed - avoid premature optimization and unnecessary complexity.
