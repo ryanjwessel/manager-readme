@@ -6,6 +6,8 @@ This document outlines my management philosophy, core values, and how I approach
 
 I believe great teams are built on trust, clear communication, and shared ownership. I'm here to support you, remove blockers, and help connect your work to our larger strategic goals.
 
+**📊 [View as Slides](https://docs.google.com/presentation/d/1xmY2iPUIQm0dbrGDWl-rLQDEr_kMDuH8rAvfL08mQyI/edit?slide=id.p#slide=id.p)** - This content is also available as a presentation format.
+
 ## My Core Values
 
 These four principles guide every decision I make as a manager:
