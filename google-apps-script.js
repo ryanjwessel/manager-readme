@@ -196,6 +196,13 @@ function createSlideContent(slide, content) {
     }
   });
   
+  // Set a subtle background color
+  try {
+    slide.getBackground().setSolidFill('#f8f9fa');
+  } catch (e) {
+    // Background setting might not be supported in all contexts
+  }
+  
   // Standard slide dimensions (assuming 16:9 aspect ratio)
   const slideWidth = 720;
   const slideHeight = 405;
@@ -216,7 +223,7 @@ function createSlideContent(slide, content) {
     titleRange.getTextStyle()
       .setFontSize(36)
       .setBold(true)
-      .setForegroundColor('#1f1f1f');
+      .setForegroundColor('#2c3e50');
     
     // Position title at top of slide
     titleShape.setTop(titleTop);
@@ -255,7 +262,7 @@ function createSlideContent(slide, content) {
     // Style the body text (default)
     bodyRange.getTextStyle()
       .setFontSize(18)
-      .setForegroundColor('#333333');
+      .setForegroundColor('#34495e');
     
     // Style subtitle if present
     if (content.subtitle) {
@@ -263,7 +270,7 @@ function createSlideContent(slide, content) {
       bodyRange.getRange(0, subtitleEnd).getTextStyle()
         .setFontSize(24)
         .setItalic(true)
-        .setForegroundColor('#666666');
+        .setForegroundColor('#7f8c8d');
     }
     
     // Style personal note if present
@@ -273,7 +280,7 @@ function createSlideContent(slide, content) {
         bodyRange.getRange(noteStart, noteStart + content.personalNote.length).getTextStyle()
           .setFontSize(16)
           .setItalic(true)
-          .setForegroundColor('#0066cc');
+          .setForegroundColor('#3498db');
       }
     }
   }
@@ -305,7 +312,7 @@ function createBodyContent(slide, content, startY) {
     const bulletRange = bulletShape.getText();
     bulletRange.getTextStyle()
       .setFontSize(18)
-      .setForegroundColor('#333333');
+      .setForegroundColor('#34495e');
     
     bulletShape.setTop(currentY);
     bulletShape.setLeft(50);
@@ -338,7 +345,7 @@ function createSlideContentFallback(slide, content) {
     titleRange.getTextStyle()
       .setFontSize(36)
       .setBold(true)
-      .setForegroundColor('#1f1f1f');
+      .setForegroundColor('#2c3e50');
     
     titleShape.setTop(50);
     titleShape.setLeft(50);
@@ -369,7 +376,7 @@ function createSlideContentFallback(slide, content) {
     const bulletRange = bulletShape.getText();
     bulletRange.getTextStyle()
       .setFontSize(18)
-      .setForegroundColor('#333333');
+      .setForegroundColor('#34495e');
     
     bulletShape.setTop(currentY);
     bulletShape.setLeft(50);
