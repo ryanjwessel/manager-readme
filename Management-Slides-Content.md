@@ -33,7 +33,7 @@
 - Success = advancing your skills while delivering work that matters
 - I'll help identify growth opportunities with clear strategic value
 
-*"I get energized when the team is collaborating, driving their own fulfilling work, and connecting it to company strategy."*
+*I get energized when the team is collaborating, driving their own fulfilling work, and connecting it to company strategy.*
 
 ---
 
@@ -45,7 +45,7 @@
 - Work-life harmony while continuously improving
 - Long hours are the exception, not the rule
 
-*"We can bring our best selves to work by taking time off and signing off at normal hours."*
+*We can bring our best selves to work by taking time off and signing off at normal hours.*
 
 ---
 
@@ -57,7 +57,7 @@
 - End-to-end ownership of your projects
 - No silos, collaborative problem-solving
 
-*"Teams are most effective when we distribute and share responsibilities while empowering ownership."*
+*Teams are most effective when we distribute and share responsibilities while empowering ownership.*
 
 ---
 
@@ -69,7 +69,7 @@
 - Transparent SMART goals everyone can see and contribute to
 - Continuous feedback loops for improvement
 
-*"Connect our work to customer significance and business impact so we feel purpose."*
+*Connect our work to customer significance and business impact so we feel purpose.*
 
 ---
 
